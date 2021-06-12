@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='main.css')}}> -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    {%  if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Mutual Fund Calculator</title>   
+    {% endif %}
+  </head>
+  <body>
+    <!-- Navbar --> 
+    <div class="navbar">
+        <div class="container flex">
+            <a href="/" class="logo">MutualFund Planner</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/learn">Learn</a></li>
+                </ul>
+            </nav>
+        </div>
+      </div>
+    {% block content %}{% endblock %}
+
+   
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<!-- Form and about -->
+<section class="mainsection">
+  <div class="container grid">
+      <div class="mainsection-form card">
+          <h2>VIP Calculator</h2>
+          <form action="" method="POST">
+                  <div class="form-control">
+                      <input type="number" name="monthly_investment" placeholder="Monthly Installment amount" required>
+                  </div>
+                  <div class="form-control">
+                      <input type="number" name="expected_return" placeholder="Expected return %" required>
+                  </div>
+                  <div class="form-control">
+                      <input type="number" name="no_months" placeholder="Number of months installed" required>
+                  </div>
+                  <div class="form-control">
+                      <input type="number" name="value_today" placeholder="Current value" required>
+                  </div>
+                  <button type="submit" class="btn">Calculate</button>
+          </form>
+      </div>
+      <div class="mainsection-text">
+          <h1>MutualFund Planner</h1>
+          <p>Use Value averaging investment plan to invest in Mutual funds on a monthly basis.</p>
+          <a href="/learn" class="btn btn-outline">Read More</a>
+      </div>
+  </div>
+</section> 
+{% endblock content %}
+
+
+
+
+
+
+  

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="mainsection">
+    <div class="container grid">
+        <div class="mainsection-form card">
+            <h2>VIP Calculator</h2>
+            <form action="" method="POST">
+                    <div class="form-control">
+                        <input type="number" name="monthly_investment" placeholder="Monthly Installment amount" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="number" name="expected_return" placeholder="Expected return %" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="number" name="no_months" placeholder="Number of months installed" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="number" name="value_today" placeholder="Current value" required>
+                    </div>
+                    <button type="submit" class="btn">Calculate</button>
+            </form>
+            <br>
+             
+        </div>
+        <div class="mainsection-result card">
+            <h2>Calculation Results</h2>
+            <div class="panel">
+                <div class="panel-item panel-item-1">
+                    <h4>Expected Portfolio Value is <strong>{{ target_value }}</strong> </h4>
+                </div>
+                <div class="panel-item panel-item-2">
+                  <h4>Current portfolio is <strong>{{ value_today }}</strong></h4>
+                
+                </div>
+                <div class="panel-item panel-item-3">
+                  <h4>You should invest <strong>{{ invest_amount }}</strong>  which is {{ monthly_investment }} - ({{ difference }}) where {{ -(difference) }} is {{ target_value }} - {{ value_today }}</h4>
+                </div>
+             </div>
+        </div>
+    </div>
+  </section>
+
+{% endblock content %}
