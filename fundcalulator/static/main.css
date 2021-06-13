@@ -154,6 +154,16 @@ img{
     outline: none;
 }
 
+/* .mainsection-form input:invalid {
+    -webkit-box-shadow: 0 8px 6px -6px red;
+    -moz-box-shadow: 0 8px 6px -6px red;
+         box-shadow: 0 8px 6px -6px red;
+} */
+
+/* .mainsection-form input:focus:invalid {
+    box-shadow: none;
+} */
+
 .mainsection-form .btn{
     font-size:16px;
 }
