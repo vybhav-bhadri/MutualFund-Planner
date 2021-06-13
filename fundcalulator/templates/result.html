@@ -7,19 +7,19 @@
         <div class="mainsection-form card">
             <h2>VIP Calculator</h2>
             <form action="" method="POST">
-                    <div class="form-control">
-                        <input type="number" name="monthly_investment" placeholder="Monthly Installment amount" required>
-                    </div>
-                    <div class="form-control">
-                        <input type="number" name="expected_return" placeholder="Expected return %" required>
-                    </div>
-                    <div class="form-control">
-                        <input type="number" name="no_months" placeholder="Number of months installed" required>
-                    </div>
-                    <div class="form-control">
-                        <input type="number" name="value_today" placeholder="Current value" required>
-                    </div>
-                    <button type="submit" class="btn">Calculate</button>
+                <div class="form-control">
+                    <input type="number" name="monthly_investment" placeholder="Monthly Installment amount" required min="100">
+                </div>
+                <div class="form-control">
+                    <input type="number" name="expected_return" placeholder="Expected return %" required min="1">
+                </div>
+                <div class="form-control">
+                    <input type="number" name="no_months" placeholder="Number of months installed" required min="1">
+                </div>
+                <div class="form-control">
+                    <input type="number" name="value_today" placeholder="Current value" required min="0"> 
+                </div>
+                <button type="submit" class="btn">Calculate</button>
             </form>
             <br>
              
