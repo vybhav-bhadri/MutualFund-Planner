@@ -1,5 +1,5 @@
 from fundcalulator import app
-from flask import render_template, request , flash
+from flask import render_template, request 
 from fundcalulator.calculate import current_value,invest
 from fundcalulator.display import display_value
 import math
@@ -16,21 +16,12 @@ def index():
 
         return_rate=return_rate/12
 
-        if investment >= 100:
-            flash('Monthly Installment should be atleast 100', category='error')
-        elif return_rate > 0:
-            flash('Expected return rate should be greater than 0', category='error')
-        elif no_months > 1:
-            flash('Number of months installed should be greater than 0',category='error')
-        elif value_today >= 0:
-            flash('Current value cannot be negative',category='error')
-        else:
-            target_value = current_value(investment, no_months+1, 1+return_rate/100)
-            target_value=math.floor(target_value)
-            invest_amount = invest(target_value,value_today,investment)
-            invest_amount = math.floor(invest_amount)
+        target_value = current_value(investment, no_months+1, 1+return_rate/100)
+        target_value=math.floor(target_value)
+        invest_amount = invest(target_value,value_today,investment)
+        invest_amount = math.floor(invest_amount)
 
-            return display_value(target_value,value_today,invest_amount,investment)
+        return display_value(target_value,value_today,invest_amount,investment)
   
     return render_template("index.html",title="MutualFund Planner | Invest in Mutual Funds using VIP & SIP methods")
 
