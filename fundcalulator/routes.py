@@ -23,7 +23,7 @@ def index():
 
         return display_value(target_value,value_today,invest_amount,investment)
   
-    return render_template("index.html",title="MutualFund Planner | Invest in Mutual Funds using VIP & SIP methods")
+    return render_template("index.html",title="MutualFund Planner | Invest in Mutual Funds using VIP method")
 
 @app.route('/learn')
 def about():
