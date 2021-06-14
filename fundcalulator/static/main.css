@@ -332,16 +332,20 @@ img{
 /* laptops */
 
 @media(max-width:1200px){
+
+    .learnsection{
+        height:140vh;
+    }
+
     .learnsection .grid{
         grid-template-columns:1fr;
-        grid-template-rows: 1fr;
+        /* grid-template-rows: 1fr; */
     }
 
     .learnsection-info{
         min-width: 300px;
         min-height:300px;
         font-size:22px;
-        margin-bottom:20px;
     }
 }
 
@@ -367,14 +371,22 @@ img{
         margin:15px auto;
     }
 
+    .learnsection{
+        height:140vh;
+    }
+
     .learnsection .grid{
-        justify-content: center;;
+        justify-content: center;
     }
 
     .learnsection-info{
         min-width: 360px;
         min-height:360px;
         font-size:20px;
+    }
+
+    .developer{
+        margin:90px auto;
     }
 }
 
@@ -410,12 +422,17 @@ img{
 
     .learnsection{
         margin:10px auto;
+        height:140vh;
     }
     
     .learnsection-info{
         min-width: 360px;
         min-height:360px;
         font-size:18px;
+    }
+
+    .developer{
+        margin:40px auto;
     }
 }
     
@@ -461,5 +478,11 @@ img{
         min-width: 300px;
         min-height:360px;
         font-size:16px;
+    }
+
+
+
+    .developer{
+        margin:60px auto;
     }
 }
