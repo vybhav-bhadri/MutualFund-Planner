@@ -8,16 +8,16 @@
             <h2>VIP Calculator</h2>
             <form action="" method="POST">
                 <div class="form-control">
-                    <input type="number" name="monthly_investment" placeholder="Monthly Installment amount" required min="100">
+                    <input type="number" name="monthly_investment" placeholder="Monthly Installment amount" required min="100" value="{{ request.form['monthly_investment'] }}" >
                 </div>
                 <div class="form-control">
-                    <input type="number" name="expected_return" placeholder="Expected return %" required min="1">
+                    <input type="number" name="expected_return" placeholder="Expected return %" required min="1" value="{{ request.form['expected_return'] }}" >
                 </div>
                 <div class="form-control">
-                    <input type="number" name="no_months" placeholder="Number of months installed" required min="1">
+                    <input type="number" name="no_months" placeholder="Number of months installed" required min="1"  value="{{ request.form['no_months'] }}" >
                 </div>
                 <div class="form-control">
-                    <input type="number" name="value_today" placeholder="Current value" required min="0"> 
+                    <input type="number" name="value_today" placeholder="Current value" required min="0"  value="{{ request.form['value_today'] }}" > 
                 </div>
                 <button type="submit" class="btn">Calculate</button>
             </form>
